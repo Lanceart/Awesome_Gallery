@@ -23,6 +23,10 @@ const App: React.FC = () => {
         setAddress('地址未找到');
       }
     };
+    // User (id, img1_id,img2_id,...), Image(img1_id, url_cloudinary, position_google,descirb,dateTime)
+    //1.routers
+    //2.authen
+    //3.searching_updating
 
     fetchAddress();
   }, []);

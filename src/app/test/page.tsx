@@ -25,6 +25,7 @@ const RegisterModal = () =>{
     });
 
     const onSubmit: SubmitHandler<FieldValues> = (data) => {
+        console.log('shit', data.email);
         setIsLoading(true);
         axios.post('/api/register',data)
         .finally(()=>{
@@ -35,9 +36,17 @@ const RegisterModal = () =>{
 return (
     <div>
         <form onSubmit={handleSubmit(onSubmit)}>
-            <input id="email" type="email" />
-            <input id = "name" type="text" />
-            <input id = "password" type="text" />
+            <div>
+            <input id="email" type="email" {...register("email")}/>
+            </div>
+            <br />
+            <div>
+            <input id = "name" type="text" {...register("name")}/>
+            </div>
+            <br />
+            <div>
+            <input id = "password" type="text" {...register("password")}/>
+            </div>
             <button type="submit">trigger</button>
         </form>
         

@@ -144,7 +144,11 @@ export default function RootLayout({
                 />
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
+              
             </div>
+
+            
+
           </div>
         </div>
 
